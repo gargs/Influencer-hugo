@@ -22,6 +22,9 @@
           Purchase now <i class="ti-angle-right ml-3"></i>
         </button>
           {{ end}}
+          {{ if .appStoreURL }}
+          <a href="{{ .appStoreURL | safeURL }}" class="btn btn-main-2">Download now</a>
+          {{ end }}
         </div>
       </div>
 
