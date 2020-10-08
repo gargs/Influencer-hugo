@@ -31,7 +31,7 @@
       {{ if .image }}
       <div class="col-lg-5 d-none d-lg-block">
         <div class="banner-img pt-5">
-          <img src="{{ .image | relURL }}" alt="{{ .title | markdownify }}" class="img-fluid w-100">
+          <img src="{{ .image | relURL }}" srcset="{{ .retinaImage | relURL }} 2x" alt="{{ .title | markdownify }}" class="img-fluid w-100">
         </div>
       </div>
       {{ end }}
@@ -354,7 +354,7 @@
       {{ end }}
     </div>
     <div class="text-center mt-5">
-      <a href="/blog" class="btn btn-main">All Post</a>
+      <a href="/blog" class="btn btn-main">All Posts</a>
     </div>
   </div>
 </section>
