@@ -23,7 +23,8 @@
         </button>
           {{ end}}
           {{ if .appStoreURL }}
-          <a href="{{ .appStoreURL | safeURL }}" class="btn btn-main-2">Download now</a>
+          {{ $downloadImage := resources.Get "images/download-app-store.svg" }}
+          <a href="{{ .appStoreURL | safeURL }}" style="display: inline-block; overflow: hidden; border-top-left-radius: 13px; border-top-right-radius: 13px; border-bottom-right-radius: 13px; border-bottom-left-radius: 13px; width: 180px;"><img src="{{ $downloadImage.Permalink }}" alt="Download on the App Store" style="border-top-left-radius: 13px; border-top-right-radius: 13px; border-bottom-right-radius: 13px; border-bottom-left-radius: 13px; width: 180px;"></a>
           {{ end }}
         </div>
       </div>
